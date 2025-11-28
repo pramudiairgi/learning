@@ -132,3 +132,163 @@
 
 // const result = getNumber(x, y);
 // console.log(result);
+
+// latihan Arrow function
+// mengubah function tradisional menjadi Arrow Function
+
+// Soal 1
+
+// function penjumalahanTradisional(a, b) {
+//     return a + b;
+// };
+// const result = penjumalahanTradisional(3, 4);
+// console.log(result)
+
+// // menjadi
+
+// const penjumalahan = (a, b) => a + b;
+
+// const hasil = penjumalahan(9, 2);
+// console.log(hasil)
+
+// Soal 2
+
+// function sapa(nama) {
+//     return "Halo, " + nama + "!";
+// }
+// const sapaUser = sapa("pram");
+// console.log(sapaUser);
+
+// menjadi
+
+// const sapa = nama => 'Halo, ' + nama + '!';
+
+// const sayUser = sapa("irgi");
+// console.log(sayUser);
+
+// Soal 3
+
+// function cekJam() {
+//     return "Sekarang jam istirahat"
+// }
+
+// cekJam = () => 'sekarang jam istirahat';
+
+// const getStatus = cekJam();
+// console.log(getStatus)
+
+// Soal 4
+// Mengembalikan Object, ubah fungsi menjadi arrow function
+
+// function buatUser(username, role) {
+//     return {
+//         nama: username,
+//         akses: role
+//     };
+// }
+
+// buatUser = (username, role) => ({
+//     name: username,
+//     akses: role
+// });
+
+// // note: menambahakan tanda () agar javasript tau kalau ini sebuah objek,bukan blok kode.
+
+
+// const createUser = buatUser('pram', 'admin');
+// console.log(createUser)
+
+// Soal 5 : (Map & Filter)
+// Gunakan arrow function di dalam .filter() dan .map()
+
+// const angka = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// Tugas A: Filter hanta angka GENAP
+
+// const genap = angka.filter(function (n) { return n % 2 == 0 });
+// TODO:
+// const genap = angka.filter(n => n % 2 === 0);
+// console.log(genap)
+
+// Tugas B: kali dua semua angka (gunakan .map())
+// const dikaliDua = angka.map(function(n) { return n * 2 });
+
+// TODO:
+// const dikaliDua = angka.map(n => n * 2);
+// console.log(dikaliDua)
+
+
+// contoh memproses data dari database
+
+// const produk = [
+//     { nama: 'Mouse', harga: 50000 },
+//     { nama: 'Laptop', harga: 5000000 },
+//     { nama: 'Kabel', harga: 20000 }
+// ];
+
+// // implementasi Nyata:
+// // filter barang murah (<100ribu) lalu ambil namanya saja
+
+// const barangMurah = produk
+//     .filter(item => item.harga < 100000)
+//     .map(item => item.nama);
+
+// console.log(barangMurah);
+
+//contoh soal
+
+// // DATA MENTAH
+// const mahasiswa = [
+//     { nama: 'Budi', nilai: 85 },
+//     { nama: 'Siti', nilai: 60 },
+//     { nama: 'Joko', nilai: 95 },
+//     { nama: 'Ani', nilai: 70 },
+//     { nama: 'Diki', nilai: 40 }
+// ];
+
+// // TANTANGAN:
+// // Gunakan .map() untuk mengubah array object di atas menjadi array string.
+// // Gunakan Arrow Function + Ternary Operator.
+// // Format Output yang diinginkan: "Budi: Lulus", "Siti: Remidial", dst.
+
+// //TODO:
+// const laporan = mahasiswa.map(mhs =>
+//     mhs.nama + ': ' + (mhs.nilai > 70 ? 'Lulus' : 'Mengulang')
+// );
+
+// console.log(laporan);
+
+
+// .find() : mencari data 1 saja, jika ditemukan akan berhenti mencari.
+
+// const users = [
+//     { id: 1, nama: 'Budi' },
+//     { id: 2, nama: 'Siti' },
+//     { id: 3, nama: 'Joko' }
+// ];
+
+// //Kasus: Cari user dengan ID 2
+
+// const userKetemu = users.find(user => user.id === 3);
+
+// console.log(userKetemu);
+
+
+// .reduce: melebur semua data di array menjadi satu nilai saja
+
+// skenario: fitur "Keranjang Belanja"(Shopping cart). Menghitung total harga dari sekian banyak barang yang di beli
+
+// const keranjang = [
+//     { barang: 'Buku', harga: 5000 },
+//     { barang: 'Pena', harga: 2000 },
+//     { barang: 'Penggaris', harga: 3000 }
+// ];
+
+// // total: angka penampung sementara (akumulator)
+// // item: barang yang sedang dihitung
+
+// const totalBayar = keranjang.reduce((total, item) => {
+//     return total + item.harga;
+// }, 0); //<-- 0 adalah nilai awal (start dari 0 rupiah)
+
+// console.log(totalBayar);
