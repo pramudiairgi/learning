@@ -98,14 +98,14 @@
 // };
 // total(2, 5)
 
-// scope & return 
+// scope & return
 // Apa it Scope?
-// adalah apa yang kita tulis di halaman, ada dua jenis yaitu global scope dan block scope. 
-// global scope menyangkup semua yang kita tulis dan block scope yang berada dalam function atau berada dalam kurung kurawal. 
-// 
+// adalah apa yang kita tulis di halaman, ada dua jenis yaitu global scope dan block scope.
+// global scope menyangkup semua yang kita tulis dan block scope yang berada dalam function atau berada dalam kurung kurawal.
+//
 
 // return
-// adalah pengembalian data 
+// adalah pengembalian data
 // function void yang tidak mengembalikan data apapun.
 // unreachable code data yang tidak akan pernah di eksekusi sama sekali karena return mengakhiri function.
 
@@ -113,12 +113,22 @@
 // buat function yang menerima 2 angka dan mengembalikan hasil perkalian 2 angka tersebut.
 // Panggil function ini dan simpan hasilnya dalam variable. selanjutnyya log variable itu.
 
-const x = 5;
-const y = 10;
+// const x = 5;
+// const y = 10;
 
-function getNumber(x, y) {
-    return x * y;
-};
+// function getNumber(x, y) {
+//     return x * y;
+// };
 
-const result = getNumber(x, y);
-console.log(result);
+// const result = getNumber(x, y);
+// console.log(result);
+
+// arrow function
+
+// const x = 5;
+// const y = 4;
+
+// getNumber = (x, y) => x * y;
+
+// const result = getNumber(x, y);
+// console.log(result);
