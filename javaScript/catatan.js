@@ -292,3 +292,5 @@
 // }, 0); //<-- 0 adalah nilai awal (start dari 0 rupiah)
 
 // console.log(totalBayar);
+
+
