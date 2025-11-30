@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 // const App = ({ notes }) => {
 //   return (
 //     <div>
@@ -11,24 +13,24 @@
 //   );
 // };
 
-// memisahkan tampilan satu catatan menjadi komponen catatan tersendiri
+/* memisahkan tampilan satu catatan menjadi komponen catatan tersendiri */
 
-import Note from "./component/Note";
+// import Note from "./component/Note";
 
-const App = ({ notes }) => {
-  return (
-    <div>
-      <h1>Notes</h1>
-      <ul>
-        {notes.map((note) => (
-          <Note key={note.id} note={note} />
-        ))}
-      </ul>
-    </div>
-  );
-};
+// const App = ({ notes }) => {
+//   return (
+//     <div>
+//       <h1>Notes</h1>
+//       <ul>
+//         {notes.map((note) => (
+//           <Note key={note.id} note={note} />
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// };
 
-// Variable
+/* Variable */
 
 // const x = 1;
 // let y = 5;
@@ -43,7 +45,7 @@ const App = ({ notes }) => {
 
 // x = 5;   // causes an error
 
-// Array
+/* Array */
 
 // const t = [1, -1, 3];
 
@@ -56,11 +58,11 @@ const App = ({ notes }) => {
 //   console.log(value);  // numbers 1, -1, 3, 5 are printed, each on its own line
 // });
 
-// yang perlu diperhatikan pada bagian ini fakta bahwa meskipun variable yang dideklarasikan dengan const tidak dapat ditetapkan ulang ke nilai yagn berbeda, konten objek yang dirujuk tetap dapat dimodifikasi
+/* yang perlu diperhatikan pada bagian ini fakta bahwa meskipun variable yang dideklarasikan dengan const tidak dapat ditetapkan ulang ke nilai yagn berbeda, konten objek yang dirujuk tetap dapat dimodifikasi
 
-// salah satu cara mengulangi item array adalah dengan menggunakan forEach. forEach menerima fungsi yang didefinisikan sintax panah sebagai parameter.
+salah satu cara mengulangi item array adalah dengan menggunakan forEach. forEach menerima fungsi yang didefinisikan sintax panah sebagai parameter.
 
-// forEach memanggil fungsi untuk setiap item dalam array.
+forEach memanggil fungsi untuk setiap item dalam array. */
 
 // const t = [2, -2, 3];
 
@@ -82,10 +84,10 @@ const App = ({ notes }) => {
 // console.log(car);
 // console.log(newCar);
 
-//catatan: .concat tidak akan menambahkan item baru kedalam array lama, tetapi akan mengembalikan array baru. selain berisi array lama ,juga berisi array baru.
+/* catatan: .concat tidak akan menambahkan item baru kedalam array lama, tetapi akan mengembalikan array baru. selain berisi array lama ,juga berisi array baru. */
 
-// .map
-// berdasarkan array lama, map membuat arrayy baru yang menggunakan fungsi yang diberikan sebagai parameter untuk membuat item.
+/* .map
+berdasarkan array lama, map membuat arrayy baru yang menggunakan fungsi yang diberikan sebagai parameter untuk membuat item. */
 
 // const t = [1, 2, 3];
 
@@ -95,7 +97,7 @@ const App = ({ notes }) => {
 // const m2 = t.map((value) => "<li>" + value + "</li>");
 // console.log(m2); // [ '<li>1</li>', '<li>2</li>', '<li>3</li>' ] is printed
 
-// disini array yang berisi nilai intrger diubah menjadi array yang berisi string HTML menggunakan metode map.
+/* disini array yang berisi nilai intrger diubah menjadi array yang berisi string HTML menggunakan metode map. */
 
 // const t = [1, 2, 3, 4, 5];
 
@@ -104,10 +106,10 @@ const App = ({ notes }) => {
 // console.log(first, second);
 // console.log(rest);
 
-// diatas variabel first diberi bilanhgan bulat pertama dalam array, dan variable second diberi bilangan bulat kedua dalam array. variabel rest mengumpulkan bilangan bulat yang tersisa ke dalam arraynya sendiri.
+/* diatas variabel first diberi bilanhgan bulat pertama dalam array, dan variable second diberi bilangan bulat kedua dalam array. variabel rest mengumpulkan bilangan bulat yang tersisa ke dalam arraynya sendiri. */
 
-// Object
-// ada beberapa cara berbeda untuk mendefinisikan objek dalam JS. salah satu metode yang sangat umum adalah menggunakan literal objek, yang dilakukan untuk mencantumkan propertinya dalam kurung kurawal
+/* Object
+ ada beberapa cara berbeda untuk mendefinisikan objek dalam JS. salah satu metode yang sangat umum adalah menggunakan literal objek, yang dilakukan untuk mencantumkan propertinya dalam kurung kurawal */
 
 // const object1 = {
 //   name: "irgi pramudia",
@@ -134,7 +136,7 @@ const App = ({ notes }) => {
 // const fieldName = "age";
 // console.log(object1[fieldName]);
 
-// function
+/* function */
 
 // const sum = (p1, p2) => {
 //   console.log(p1);
@@ -149,5 +151,82 @@ const App = ({ notes }) => {
 // const tSquared = t.map((p) => p * p);
 
 // console.log(tSquared);
+
+// const average = (a, b) => {
+//   return (a + b) / 2;
+// };
+
+// const result = average(2, 5);
+// console.log(result);
+
+/* Latihan 1.3-1.5 */
+
+// const Header = (props) => {
+//   console.log(props);
+//   return <h1>{props.course}</h1>;
+// };
+// const Content = (props) => {
+//   console.log(props);
+//   return <p>{props.parts.name}</p>;
+// };
+// const Total = (props) => {
+//   console.log(props);
+//   return <p>{props.parts.exercise}</p>;
+// };
+
+// const App = () => {
+//   const course = {
+//     name: "Half Stack Application Development",
+//     parts: [
+//       {
+//         name: "Fundamental of React",
+//         exercise: 10,
+//       },
+//       {
+//         name: "Using props to pass data",
+//         exercise: 7,
+//       },
+//       {
+//         name: "State of a component",
+//         exercise: 14,
+//       },
+//     ],
+//   };
+//   return (
+//     <>
+//       <Header course={course.name} />
+//       <Content parts={course.parts[0]} />
+//       <Total parts={course.parts[0]} />
+//     </>
+//   );
+// };
+
+/* Page Re-Rendering */
+/* Statefull Component */
+
+// const App = () => {
+//   const [counter, setCounter] = useState(0);
+
+//   setTimeout(() => setCounter(counter + 1), 1000);
+
+//   console.log("Rendering...", counter);
+
+//   return <div>{counter}</div>;
+// };
+
+/* Event Handling */
+
+const App = () => {
+  const [counter, setCounter] = useState(0);
+
+  return (
+    <div>
+      <div>{counter}</div>
+      <button onClick={() => setCounter(counter + 1)}>plus</button>
+      <button onClick={() => setCounter(0)}>zero</button>
+      <button onClick={() => setCounter(counter - 1)}>Min</button>
+    </div>
+  );
+};
 
 export default App;
