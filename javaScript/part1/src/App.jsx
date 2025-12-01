@@ -216,15 +216,47 @@ berdasarkan array lama, map membuat arrayy baru yang menggunakan fungsi yang dib
 
 /* Event Handling */
 
+// const App = () => {
+//   const [counter, setCounter] = useState(0);
+
+//   return (
+//     <div>
+//       <div>{counter}</div>
+//       <button onClick={() => setCounter(counter + 1)}>plus</button>
+//       <button onClick={() => setCounter(0)}>zero</button>
+//       <button onClick={() => setCounter(counter - 1)}>Min</button>
+//     </div>
+//   );
+// };
+
+/* Passing state - to child components */
+/* komponen React yang kecil dan dapat digunakan kembali di seluruh aplikasi dan bahkan di seluruh proyek. */
+
+const Display = (props) => {
+  return <div>{props.counter}</div>;
+};
+
+/* selanjutnya buat komponen tombol */
+
+const Button = (props) => {
+  return <button onClick={props.onClick}>{props.text}</button>;
+};
+
 const App = () => {
   const [counter, setCounter] = useState(0);
 
+  const incraseByOne = () => setCounter(counter + 1);
+
+  const decraseByOne = () => setCounter(counter - 1);
+
+  const setToZero = () => setCounter(0);
+
   return (
     <div>
-      <div>{counter}</div>
-      <button onClick={() => setCounter(counter + 1)}>plus</button>
-      <button onClick={() => setCounter(0)}>zero</button>
-      <button onClick={() => setCounter(counter - 1)}>Min</button>
+      <Display counter={counter} />
+      <Button onClick={incraseByOne} text="plus" />
+      <Button onClick={decraseByOne} text="minus" />
+      <Button onClick={setToZero} text="zero" />
     </div>
   );
 };
