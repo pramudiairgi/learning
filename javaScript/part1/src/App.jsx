@@ -232,33 +232,66 @@ berdasarkan array lama, map membuat arrayy baru yang menggunakan fungsi yang dib
 /* Passing state - to child components */
 /* komponen React yang kecil dan dapat digunakan kembali di seluruh aplikasi dan bahkan di seluruh proyek. */
 
-const Display = (props) => {
-  return <div>{props.counter}</div>;
-};
+// const Display = (props) => {
+//   return <div>{props.counter}</div>;
+// };
 
-/* selanjutnya buat komponen tombol */
+// /* selanjutnya buat komponen tombol */
 
-const Button = (props) => {
-  return <button onClick={props.onClick}>{props.text}</button>;
-};
+// const Button = (props) => {
+//   return <button onClick={props.onClick}>{props.text}</button>;
+// };
 
-const App = () => {
-  const [counter, setCounter] = useState(0);
+// const App = () => {
+//   const [counter, setCounter] = useState(0);
 
-  const incraseByOne = () => setCounter(counter + 1);
+//   const incraseByOne = () => setCounter(counter + 1);
 
-  const decraseByOne = () => setCounter(counter - 1);
+//   const decraseByOne = () => setCounter(counter - 1);
 
-  const setToZero = () => setCounter(0);
+//   const setToZero = () => setCounter(0);
 
-  return (
-    <div>
-      <Display counter={counter} />
-      <Button onClick={incraseByOne} text="plus" />
-      <Button onClick={decraseByOne} text="minus" />
-      <Button onClick={setToZero} text="zero" />
-    </div>
-  );
-};
+//   return (
+//     <div>
+//       <Display counter={counter} />
+//       <Button onClick={incraseByOne} text="plus" />
+//       <Button onClick={decraseByOne} text="minus" />
+//       <Button onClick={setToZero} text="zero" />
+//     </div>
+//   );
+// };
+
+/* example */
+
+// const Header = (shopper) => {
+//   console.log(shopper);
+//   return <h4>{shopper.course}</h4>;
+// };
+
+// const Display = (shopper) => {
+//   return <div>{shopper.bag}</div>;
+// };
+
+// const Button = (shopper) => {
+//   return <button onClick={shopper.onClick}>{shopper.text}</button>;
+// };
+
+// const App = () => {
+//   const course = "Jumlah";
+//   const [bag, setBag] = useState(0);
+//   const incraseByOne = () => setBag(bag + 1);
+//   const setToZero = () => setBag(0);
+//   const decraseByOne = () => setBag(bag - 1);
+
+//   return (
+//     <>
+//       <Header course={course} />
+//       <Display bag={bag} />
+//       <Button onClick={incraseByOne} text="+" />
+//       <Button onClick={setToZero} text="reset" />
+//       <Button onClick={decraseByOne} text="-" />
+//     </>
+//   );
+// };
 
 export default App;
