@@ -8,6 +8,7 @@ import Notes from "./component/Note";
 import Course from "./component/CourseTentangProps";
 import Counter from "./component/MateriCounter";
 import Shopper from "./component/MateriPassingState";
+import ClickCounterDemo from "./component/conditionalRendering";
 
 const App = () => {
   return (
@@ -33,6 +34,9 @@ const App = () => {
 
           {/* 5. Materi Lifting State Up */}
           <Shopper />
+
+          {/* 6. Materi Conditional Rendering */}
+          <ClickCounterDemo />
         </div>
       </div>
     </div>

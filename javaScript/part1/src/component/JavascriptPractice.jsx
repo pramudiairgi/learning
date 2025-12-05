@@ -130,6 +130,30 @@ const JavascriptPractice = () => {
   // const result = average(2, 5);
   // console.log(result);
 
+  /* Array.prototype.join() */
+  /* menggabungkan semua elemen dalam  larik ini, dipisahkan dengan koma atau string pemisah yang ditentukan */
+
+  /* jika suatu elemen adalah undefined atau null, elemen tesebut akan dikonversi menjadi string kosong, bukan string "null" atau "undefined" */
+
+  /* metode ini join diakses secara internal Array.prototype.toString() tanpa argumen. mengganti join instan array toString juga akan mengganti perilakunya.
+  
+  Array.prototype.join() secara rekursif, setiap elemen, termasuk array lain, dikonversi menjadi string,  karena string yang dikembalikan oleh Array.prototype.toString(yang sama dengan memanggil join()) tidak memiliki pembatas, array bersarang tampak diratakan */
+
+  // const matrix = [
+  //   [1, 2, 3],
+  //   [4, 5, 6],
+  //   [6, 7, 8],
+  // ];
+
+  // console.log(matrix.join()); // 1,2,3,4,5,6,7,8,9
+  // console.log(matrix.join(";")); //1,2,3;4,5,6;7,8,9
+
+  // const arr = [];
+  // arr.push(1, [3, arr , 4], 2);
+  // console.log(arr.join(";")); //1;3,,4;2
+
+  /* pembaruan status bersifat asynchronous */
+
   return (
     <div style={{ border: "1px solid black", padding: "10px", margin: "10px" }}>
       <h3>Materi Javascript Basics</h3>
