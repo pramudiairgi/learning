@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tipe Data Object</title>
+  </head>
+  <body>
+    <p>
+      dalam object ini, title, author, year merupakan key atau property.
+      sedangkan The Great Gatsby, F. Scott Fitzgerald dan 1925 merupakan value
+      yang sesuai
+    </p>
+
+    <script>
+      let book = {
+        title: "The Great Gatsby",
+        author: "F. Scott Fitzgerald",
+        year: 1925,
+      };
+
+      console.table(book);
+
+      delete book["year"];
+
+      console.table(book);
+    </script>
+  </body>
+</html>
