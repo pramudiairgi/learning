@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function sebagai Value</title>
+  </head>
+  <body>
+    <script>
+      function sayHello(name) {
+        document.writeln("hello " + name);
+      }
+
+      /* function di value */
+      const say = sayHello; //function sayHello di jadikan sebuah variable
+      say("irgi");
+
+      /* function di parameter */
+
+      function giveMeName(callback) {
+        callback("pramudia");
+      }
+      giveMeName(sayHello);
+      giveMeName(say);
+    </script>
+  </body>
+</html>

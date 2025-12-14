@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Of</title>
+  </head>
+  <body>
+    <script>
+      // for of di array
+      const names = ["irgi", "pramudia", "junior"];
+      for (const name of names) {
+        document.writeln(name);
+      }
+
+      //   for of di string
+      const fullName = "irgi pramudia";
+      for (const character of fullName) {
+        document.writeln(character);
+      }
+
+      /* contoh for of pada object.
+      
+      di console log terjadi error karena object bukan iterable*/
+
+      const person = {
+        firstName: "irgi",
+        lastName: "pramudia",
+      };
+      for (const name of person) {
+        document.writeln(name);
+      }
+    </script>
+  </body>
+</html>

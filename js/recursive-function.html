@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recursive Function</title>
+  </head>
+  <body>
+    <script>
+      /* contoh di factorial loop */
+      function factorial(value) {
+        let result = 1;
+        for (let i = 1; i <= value; i++) {
+          result *= i;
+        }
+        return result;
+      }
+
+      document.writeln("hasil tanpa recursive: " + factorial(10));
+
+      /* contoh menggunakan factorial Recursive */
+
+      function factorialRecursive(value) {
+        if (value === 1) {
+          return 1;
+        } else {
+          return value * factorialRecursive(value - 1);
+        }
+      }
+      document.writeln("hasil recursive: " + factorialRecursive(10));
+
+      /* contoh  */
+      function pangkat(angka, eksponen) {
+        if (eksponen === 0) {
+          return 1;
+        }
+        return angka * pangkat(angka, eksponen - 1);
+      }
+      result = pangkat(2, 3);
+      console.log("hasil pangkat: " + result);
+
+      /* perkalian recursive */
+
+      function kali(angka, pengali) {
+        if (pengali === 0) {
+          return 0;
+        }
+        return angka + kali(angka, pengali - 1);
+      }
+      result = kali(2, 10);
+      console.log(result);
+
+      /* recursive array */
+
+      function hitungArray(arr) {
+        if (arr.length === 0) {
+          return 0;
+        }
+        return arr[0] + hitungArray(arr.slice(1));
+      }
+      console.log(hitungArray([10, 30, 21, 119]));
+
+      /* recursive Logika Boolean */
+      function cekPalindrom(kata) {
+        if (kata.length <= 1) {
+          return true;
+        }
+        if (kata[0] !== kata[kata.length - 1]) {
+          return false;
+        }
+        return cekPalindrom(kata.slice(1, -1));
+      }
+      console.log(cekPalindrom("katak"));
+    </script>
+  </body>
+</html>

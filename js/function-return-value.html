@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Return Value</title>
+  </head>
+  <body>
+    <script>
+      function sayHello(firstName, lastName) {
+        const say = "hello " + firstName + " " + lastName;
+
+        return say;
+      }
+
+      const result = sayHello("irgi", "pramudia");
+      document.writeln(result);
+
+      function getScore(value) {
+        if (value >= 90) {
+          return "A";
+        } else if (value >= 80) {
+          return "B";
+        } else if (value >= 70) {
+          return "C";
+        } else if (valuue >= 60) {
+          return "D";
+        } else {
+          return "E";
+        }
+      }
+
+      const resultScore = getScore(98);
+      console.log("nilai akhir: " + resultScore);
+
+      /* Menghentikan eksekusi menggunakan return */
+
+      function isCountains(array, searchValue) {
+        for (const element of array) {
+          if (element === searchValue) {
+            return true;
+          }
+        }
+        return false;
+      }
+      const array = [1, 2, 5, 14, 23, 12, 15];
+      const search = 11;
+      const found = isCountains(array, search);
+      console.log(found);
+    </script>
+  </body>
+</html>
