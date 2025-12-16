@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destructuring</title>
+  </head>
+  <body>
+    <script>
+      //   const names = ["irgi", "pramudia", "junior"];
+
+      //   /* mengambil data secara manual */
+
+      //   const firstName = names[0];
+      //   const middleName = names[1];
+      //   const lastName = names[2];
+
+      //   console.info(firstName);
+      //   console.info(middleName);
+      //   console.info(lastName);
+
+      /* destructuring array */
+
+      const animals = ["anjing", "kucing", "semut", "ular", "kelinci"];
+
+      const [animalSatu, animalDua, animalTiga, ...others] = animals;
+
+      console.info(animalSatu);
+      console.info(animalDua);
+      console.info(animalTiga);
+      console.info(others);
+
+      /* Destruction object */
+
+      const person = {
+        firstName: "irgi",
+        lastName: "pramudia",
+        alamat: {
+          street: "palgunadi",
+          city: "semarang",
+          country: "Indonesia",
+        },
+        hoby: "coding",
+        sosmed: "instagram",
+      };
+
+      const { firstName, lastName, alamat, ...additional } = person;
+
+      console.info(firstName);
+      console.info(lastName);
+      console.info(alamat);
+      console.info(additional);
+    </script>
+  </body>
+</html>
