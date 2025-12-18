@@ -50,6 +50,17 @@
       console.info(lastName);
       console.info(alamat);
       console.info(additional);
+
+      /* default value di destruction */
+
+      {
+        const names = ["irgi", "pramudia"];
+        const [firstName, middleName = "super", lastName = "junior"] = names;
+
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+      }
     </script>
   </body>
 </html>
