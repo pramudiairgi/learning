@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>High Order Function</title>
+  </head>
+  <body>
+    <h3>High Order Function & callback Function</h3>
+    <p>
+      HOF adalah function yang menerima function lain sebagai argumen atau
+      mengembalikan function lain sebagai hasil
+    </p>
+    <h3>Callback Function</h3>
+    <p>
+      Callback function adalah function yang dikirim sebagai argumen ke function
+      lain dan dipanggil dalam function tersebut.
+    </p>
+    <script>
+      function selesaikanTugas(tugas, callback) {
+        // High Order Function
+        console.log("Menyelesaikan Tugas: " + tugas);
+        callback();
+      }
+
+      function tugasSelesai() {
+        // Callback function
+        console.log("Tugas Selesai");
+      }
+      selesaikanTugas("Belajar Java Script", tugasSelesai);
+    </script>
+  </body>
+</html>
