@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Logical Operator</title>
+</head>
+<body>
+    <p>
+        Operator logika biner membantu mengevaluasi dua ekspresi dan mengembalikan hasil berdasarkan kebenarannya.
+    </p>
+    <p>Tiga Operator yang paling umum: <br>
+        1. logika AND <br>
+        2. logika OR <br>
+        3. Operator penggabungan nullish: lebih canggih, diwakili dengan tanda tanya ganda (??) ini membantu dalam skenario dimana anda ingin mengembalikan nilai hanya jika yang pertama adalah null atau undefined.
+    </p>
+
+
+    <script>
+        const result = true && 'hello'
+        console.log(result)
+/* kode diatas, teks hello datat ke console karena kedua operan tersebut adalah true */
+
+        const result1 = 0 && 3 
+        console.log(result1)
+/* 0 adalah nilai false, dan jika kedua operan false maka mengembalikan nilai false yang pertama */
+
+        if (2 < 3 && 3 < 4) {
+            console.log('The if block runs')
+        } else {
+            console.log('The else block runs')
+        }
+
+        /* dalam kondisi, 2 adalah kurang dari 3 AND 3 adalah kurang dari 4, maka kalimat The if block runs akan di log ke konsol */
+
+        let userInput
+
+        if (userInput || 'Guest') {
+            console.log('A user is present')
+        } else {
+            console.log('No user detected')
+        }
+
+        // contoh bekerja dengan coalescing nullish
+
+        const result3 = null ?? 'default'
+        console.log(result3)
+        /* null adalah nilai nullish, string default akan masuk ke konsol. operator penggabungan nol sangat berguna dalam situasi dimana null atau undefined adalah satu satunya nilai yang harus memicu fallback atau nilai default */
+
+        
+    </script>
+</body>
+</html>
